@@ -1,0 +1,70 @@
+#galeria{
+    main{
+    background-image: url(../imagenes/background.jpg);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    width: auto;
+    display: flex;
+        flex-flow: row wrap; 
+
+    .foto{
+        border: 5px solid;
+        border-radius: 10px;
+        margin: 10px;
+        }    
+    }
+    @mixin dimensiones($ancho, $alto){
+            width: $ancho;
+            height: $alto;    }
+    .foto1{
+        @include dimensiones(300px, 200px);        
+        @extend .foto;
+        border-color: rgb(96, 123, 44);
+        background-image: url(../imagenes/playa.jpeg);
+
+    }
+    .foto2{
+        @include dimensiones(400px, 200px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.9);
+        background-image: url(../imagenes/baño.jpg)        
+    }
+    .foto3{
+        @include dimensiones(200px, 200px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.8);
+        background-image: url(../imagenes/Cocina.jpeg)        
+    }
+    .foto4{
+        @include dimensiones(300px, 300px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.7);
+        background-image: url(../imagenes/dormitorio.jpg)        
+    }
+    .foto5{
+        @include dimensiones(500px, 400px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.6);
+        background-image: url(../imagenes/Lagrilla.jpeg)        
+    }
+    .foto6{
+        @include dimensiones(500px, 400px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.5);
+        background-image: url(../imagenes/lagrilla1.jpg)        
+    }
+    .foto7{
+        @include dimensiones(200px, 200px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.4);
+        background-image: url(../imagenes/juegos.jpeg)        
+    }
+    .foto8{
+        @include dimensiones(300px, 200px);
+        @extend .foto;
+        border-color: rgba(95, 123, 44, 0.3);
+        background-image: url(../imagenes/rio.jpeg)        
+    }
+    
+}

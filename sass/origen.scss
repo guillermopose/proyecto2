@@ -1,0 +1,25 @@
+@import "../bootstrap/css/bootstrap.css";
+
+@import "../sass/parcials/colores.scss";
+@import "../sass/parcials/media--queries.scss";
+@import "../sass/parcials/animaciones.scss";
+
+@import "../sass/header/nav--general.scss";
+@import "../sass/header/nav--index.scss";
+
+@import "../sass/main/main--comodidades.scss";
+@import "../sass/main/main--contacto.scss";
+@import "../sass/main/main--galeria.scss";
+@import "../sass/main/main--index.scss";
+@import "../sass/main/main--playaverde.scss";
+
+@import "../sass/footer/footer--general.scss";
+
+
+//reset
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

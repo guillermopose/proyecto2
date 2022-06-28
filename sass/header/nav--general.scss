@@ -1,0 +1,20 @@
+#header--general{
+    body header nav a:hover{
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px #00000080;
+    }
+    .nav-link:hover, .nav-link:focus {
+        color: #000000;
+    }
+    img{
+        @media (min-width: 992px){
+          height: 50px;  
+        }
+        @media (min-width: 768px) and (max-width: 991px){
+            height: 40px;
+        }
+        @media (max-width: 767px){
+            height: 35px;
+        }        
+    }
+}

@@ -1,0 +1,71 @@
+// main{
+//     background-image: url(imagenes/backgroundrec.jpg);
+//     background-size: 100%;
+//     height: 100%;
+//     width: 100%;
+// }
+
+#contacto{
+    main{
+        background-image: url(../imagenes/background.jpg);
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        width: auto;
+    // .contacto-formulario label{
+    //     grid-area: label;
+    // }
+    // .contacto-formulario input{
+    //     grid-area: input;
+    // }
+    // .contacto-formulario{
+    //     display: grid;
+    //     grid-template-columns: 50% 50%;
+    //     grid-template-rows: 40px 40px 40px 40px 40px;
+    //     grid-template-areas: 
+    //     "label input"
+    //     "label input"
+    //     "label input"
+    //     "label input"
+    //     "label input";
+    //     background-color: rgba(255, 255, 255, 0.5);
+    //     padding: 10% 15%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // } 
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;      
+    section{
+
+    form{
+        @media (min-width: 992px){
+            width: 50%;  
+          }
+          @media (min-width: 768px) and (max-width: 991px){
+            width: 60%;
+          }
+          @media (max-width: 767px){
+            width: 70%;
+          }
+        //background-color: rgba(95, 123, 44, 0.5);
+        //display: grid;        
+    } 
+    }
+    }
+}
+$colores: (
+    nombre: rgba(95, 123, 44),
+    dias: rgba(95, 123, 44, 0.75),
+    email: rgba(95, 123, 44, 0.5),
+    consulta: rgba(95, 123, 44, 0.25),
+    boton: rgba(95, 123, 44, 0)
+);
+
+@each $nombre, $color in $colores{
+    .renglon--#{$nombre} {
+        background-color: $color;
+    }
+}

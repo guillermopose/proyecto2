@@ -1,0 +1,29 @@
+#playa--verde{
+    header nav a img{
+        height: 30px;
+    }
+    header nav a img:hover{
+        color: #000000;
+    }
+    main{
+        background-image: url(imagenes/background.jpg);
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        width: auto;
+        div{
+                background-color: rgba(255, 255, 255, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+        }
+        section 
+        iframe{
+            border: rgb(96, 123, 44) solid 5px;
+        }
+        img{
+            border: rgb(96, 123, 44) solid 5px;
+        }
+    }
+}
