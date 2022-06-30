@@ -38,12 +38,13 @@
         .index-main{
             display: grid;
             grid-template-areas: 
-            "logo" "texto";
+            "logo" 
+            "texto";
             grid-template-rows: 30% 30%;
             grid-template-columns: 100%;
         }
         main{
-            background-image: url(imagenes/background.jpg);
+            //background-image: url(imagenes/background.jpg);
             background-size: 100%;
             height: 100%;
             width: 100%;

@@ -1,0 +1,42 @@
+-Mapa aplicado a sección de "contacto"
+-Mixin y extend en "galería"
+
+---KEYWORDS AGREGADAS
+
+	En Index
+alquiler, temporada piriapolis, hospedaje, casa en piriapolis
+	En Comodidades
+casa comoda, comodidades, calidad de vida
+	En PLayaVerde
+Playa Verde, costa uruguaya, playa, casa
+	En Galería
+fotos de playa verde, naturaleza
+	En Contacto
+reserva, casa en la playa, alquilar
+
+---DESCRIPCIONES AÑADIDAS
+
+	En Index
+alquiler de temporada en playa verde
+	En Comodidades
+alquiler de temporada con comodidades
+	En PLayaVerde
+Casa en Playa verde, Piriapolis
+	En Galería
+Fotos de playa verde y La Grilla
+	En Contacto
+Contacto para alquilar en la costa
+
+---TÍTULOS ESPECIFICADOS
+Agregué información a los títulos de las páginas:
+
+	En Index
+ - Alquiler de temporada
+	En Comodidades
+ - Calidad de vida
+	En PLayaVerde
+ - Playa Verde: lo mejor de la costa
+	En Galería
+ - GALERIA DE FOTOS
+	En Contacto
+ - Contactanos para reservar
