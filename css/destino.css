@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import "../bootstrap/css/bootstrap.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .miVerde {
   color: rgb(96, 123, 44);
 }
@@ -13,19 +19,34 @@
 }
 
 @media (min-width: 992px) {
+  body {
+    height: 100vh;
+  }
+  nav {
+    height: 10vh;
+  }
+  main {
+    height: 85vh;
+  }
+  footer {
+    height: 5vh;
+  }
+  .index-main {
+    background-image: url("../imagenes/background.jpg");
+    background-position: 0% 0%;
+  }
+  .index-main img {
+    grid-area: logo;
+    width: 100%;
+  }
+  .index-main p {
+    grid-area: texto;
+  }
   main section div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-}
-@media (max-width: 991px) {
-  main section article {
-    height: 150%;
-    justify-content: center;
-  }
-}
-@media (min-width: 992px) {
   .miCentrado {
     display: flex;
     flex-flow: row nowrap;
@@ -38,45 +59,21 @@
     grid-template-rows: 80%;
     grid-template-columns: 50% 50%;
   }
-}
-@media (max-width: 991px) {
-  .miCentrado {
+  #comodidades main article {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 100px;
+    height: 300px;
   }
-  .index-main {
-    display: grid;
-    grid-template-areas: "logo" "texto";
-    grid-template-rows: 30% 30%;
-    grid-template-columns: 100%;
+  #comodidades main article > div {
+    display: inline;
+    width: 33.3333333333%;
+    padding: 20px;
   }
-  main {
-    background-image: url(imagenes/background.jpg);
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-  }
-  main section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (min-width: 992px) {
-  body {
-    height: 100vh;
-  }
-  nav {
-    height: 10vh;
-  }
-  main {
-    height: 85vh;
-  }
-  footer {
-    height: 5vh;
+  #comodidades main article > div img {
+    width: 70%;
   }
 }
 @media (max-width: 991px) {
@@ -91,6 +88,36 @@
   }
   footer {
     height: 15vh;
+  }
+  .miCentrado {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .index-main {
+    display: grid;
+    grid-template-areas: "logo" "texto";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    background-image: url("../imagenes/backgroundrec.jpg");
+    background-position: 100% 100%;
+  }
+  .index-main article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .index-main article img {
+    width: 70%;
+    grid-area: logo;
+  }
+  .index-main div {
+    height: 450px;
+  }
+  .index-main div p {
+    grid-area: texto;
   }
 }
 @-webkit-keyframes fade-in-left {
@@ -148,19 +175,10 @@
   color: #000000;
 }
 
-main {
-  background-image: url(../imagenes/backgroundrec.jpg);
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-}
-
 #comodidades main {
-  background-image: url(../imagenes/background.jpg);
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-  width: auto;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../imagenes/backgroundrec.jpg");
 }
 #comodidades main section {
   background-color: rgba(255, 255, 255, 0.3);
@@ -168,7 +186,7 @@ main {
   width: 90%;
   padding: 2%;
 }
-#comodidades article {
+#comodidades main article {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -176,12 +194,12 @@ main {
   position: relative;
   top: 100px;
 }
-#comodidades article div img {
+#comodidades main article > div img {
   width: 50px;
 }
 
 #contacto main {
-  background-image: url(../imagenes/background.jpg);
+  background-image: url("../imagenes/background.jpg");
   background-size: 100%;
   height: 100%;
   width: 100%;
@@ -190,6 +208,9 @@ main {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+#contacto main section form {
+  width: 50%;
 }
 @media (min-width: 992px) {
   #contacto main section form {
@@ -290,23 +311,19 @@ main {
   background-image: url(../imagenes/rio.jpeg);
 }
 
-.index-main {
-  background-image: url(../imagenes/backgroundrec.jpg);
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-}
-.index-main .imagendelindex {
+.index-main div {
   display: flex;
-  position: relative;
-  left: 20%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 .index-main div p {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 2%;
   border-radius: 10px;
   width: 80%;
-  height: 15%;
+  height: 30%;
+  font-size: 1rem;
 }
 .index-main div p a {
   text-decoration: none;
@@ -318,8 +335,6 @@ main {
 }
 .index-main article img {
   grid-area: logo;
-  height: 50%;
-  width: auto;
   opacity: 50%;
   -webkit-animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -332,11 +347,8 @@ main {
   color: #000000;
 }
 #playa--verde main {
-  background-image: url(imagenes/background.jpg);
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-  width: auto;
+  background-image: url("../imagenes/background.jpg");
+  background-position: 0% 0%;
 }
 #playa--verde main div {
   background-color: rgba(255, 255, 255, 0.5);
@@ -345,11 +357,35 @@ main {
   align-items: center;
   padding: 20px;
 }
-#playa--verde main section iframe {
-  border: rgb(96, 123, 44) solid 5px;
+@media (max-width: 991px) {
+  #playa--verde main section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #playa--verde main iframe {
+    border: rgb(96, 123, 44) solid 5px;
+  }
+  #playa--verde main img {
+    border: rgb(96, 123, 44) solid 5px;
+  }
 }
-#playa--verde main img {
-  border: rgb(96, 123, 44) solid 5px;
+@media (min-width: 992px) {
+  #playa--verde main section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #playa--verde main iframe {
+    border: rgb(96, 123, 44) solid 5px;
+  }
+  #playa--verde main img {
+    border: rgb(96, 123, 44) solid 5px;
+    width: 300px;
+    height: 200px;
+  }
 }
 
 footer {
@@ -359,12 +395,6 @@ footer {
 footer p {
   text-transform: uppercase;
   margin-top: 10px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=destino.css.map */

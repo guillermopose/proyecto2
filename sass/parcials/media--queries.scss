@@ -14,11 +14,14 @@
     footer{
         height: 5vh;
     }
+//index.html
     .index-main{
         background-image: url("../imagenes/background.jpg");
         background-position: 0% 0%;
-        img{grid-area: logo;}
-        h1{grid-area: texto;}
+        img{grid-area: logo;
+        width: 100%;
+        }
+        p{grid-area: texto;}
     }
     main section div{
         display: flex;
@@ -38,49 +41,88 @@
         "logo texto";
         grid-template-rows: 80%;
         grid-template-columns: 50% 50%;
-    }}
-        //mobile m s xs
-    @media (max-width: 991px){
+    }
 
-        body{
-            height: 150vh;
-        }
-        nav{
-            height: 35vh;
-        }
-        main{
-            height: 100vh;
-        }
-        footer{
-            height: 15vh;
-        }
+//comodidades
 
-        .miCentrado{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .index-main{
-            display: grid;
-            grid-template-areas: 
-            "logo" 
-            "texto";
-            grid-template-rows: 30% 30%;
-            grid-template-columns: 100%;
-            background-image: url(imagenes/backgroundrec.jpg);
-            background-position: 100% 100%;                    
-        }
+#comodidades{
 
-        main section{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            article{
-                height: 150%;
-                justify-content: center;
+    main{
+        section{
+            p{
+                
             }
+        }
+    article{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 100px;
+        height: 300px;
+        >div{
+            display:inline;
+            width: calc(100% / 3);
+            padding: 20px;
+            img{
+                width: 70%;
+            }
+            p{
+                
+            }
+        }
+    }
     }
 }
+}
+
+    //mobile m s xs
+@media (max-width: 991px){
+
+    body{
+        height: 150vh;
+    }
+    nav{
+        height: 35vh;
+    }
+    main{
+        height: 100vh;
+    }
+    footer{
+        height: 15vh;
+    }
+
+    .miCentrado{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    //index
+    .index-main{
+        display: grid;
+        grid-template-areas: 
+        "logo" 
+        "texto";
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+        background-image: url("../imagenes/backgroundrec.jpg");
+        background-position: 100% 100%;
+    article{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 70%;
+            grid-area: logo;
+        }
+        }
+    div{
+        height: 450px;
+        p{
+            grid-area: texto;
+        }
+    }
+    }}
