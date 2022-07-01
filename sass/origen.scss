@@ -1,3 +1,11 @@
+//reset
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @import "../bootstrap/css/bootstrap.css";
 
 @import "../sass/parcials/colores.scss";
@@ -16,10 +24,3 @@
 @import "../sass/footer/footer--general.scss";
 
 
-//reset
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}

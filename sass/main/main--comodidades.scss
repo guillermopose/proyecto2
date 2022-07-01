@@ -1,35 +1,23 @@
-main{
-    background-image: url(../imagenes/backgroundrec.jpg);
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-}
-
-#comodidades{
-    main{
-        background-image: url(../imagenes/background.jpg);
-        background-size: 100%;
-        height: 100%;
-        width: 100%;
-        width: auto;
+#comodidades main{
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imagenes/backgroundrec.jpg");
     section{
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 5px;
         width: (100%-10%);
         padding: 2%;
         }
-    }  
+      
     article{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         margin: 30px 0px;
         position: relative; top: 100px;
-        div{
-            
+        >div{
         img{
             width: 50px;
         }}
     
-    }
-}
+    }}
